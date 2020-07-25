@@ -54,48 +54,50 @@
 }
 
 .img1{
-  border: solid snow;
   height: 40vh;
   width: 20vw;
   box-shadow: 5px 10px rgb(104, 80, 104);
   margin-right: 4vw;
 }
 .img2{
-  border: solid snow;
   height: 40vh;
   width: 20vw;
-  box-shadow: 5px 10px rgb(104, 80, 104);
+  box-shadow: 5px 10px rgb(230, 214, 230);
 }
 .img3{
-  border: solid snow;
   height: 40vh;
   width: 20vw;
-  box-shadow: 5px 10px rgb(104, 80, 104);
+  box-shadow: 5px 10px rgb(230, 214, 230);
   margin-right: 4vw;
 }
 .img4{
-  border: solid snow;
   height: 40vh;
   width: 20vw;
   box-shadow: 5px 10px rgb(104, 80, 104);
 }
 .img5{
-  border: solid snow;
   height: 40vh;
   width: 20vw;
   box-shadow: 5px 10px rgb(104, 80, 104);
   margin-right: 4vw;
 }
 .img6{
-  border: solid snow;
   height: 40vh;
   width: 20vw;
-  box-shadow: 5px 10px rgb(104, 80, 104);
+  box-shadow: 5px 10px rgb(230, 214, 230);
 }
 
 .imgIns{
   height: inherit;
   width: inherit;
+}
+
+.imgIns:hover{
+  max-width: 250px;
+  padding: 3rem;
+  position: relative;
+  background: linear-gradient(to right, rgb(144, 238, 172), rgb(64, 110, 238));
+  padding: 3px;
 }
 
 .chatFeed{

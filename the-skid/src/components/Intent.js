@@ -90,7 +90,7 @@ class Intent extends Component {
                 },
                 {
                     imageName: 'My Inner Sanctuary',
-                    imageUrl: './assets/My Inner Sactuary.jpg',
+                    imageUrl: './assets/My Inner Sanctuary.jpg',
                     bookMark: false,
                     tags: ["characters", "trippy"],
                 },
@@ -119,15 +119,24 @@ class Intent extends Component {
                     tags: ["characters"],
                 },
 
-            ]
+            ],
+            loggedIn: true
         }
 
 
     render() {
         const images = this.state.data
 
-        console.log(this.state.data)
-        console.log(images[18].imageUrl)
+        let randN = (max) => {
+            var min = 0,
+                max = max,
+                num = Math.floor(Math.random() * (max - min) + min);
+                return num;
+            // console.log(score);
+        };
+
+        // console.log(this.state.data)
+        // console.log(images[18].imageUrl)
         return (
             <div className="intent">
                 <div className="chatFeed">
@@ -136,16 +145,16 @@ class Intent extends Component {
                 <div className="imageFeed">
                     <div className="featured">Inspirations of the day</div>
                     <div className="imageFeed1">
-                        <div className="img1"> <img className="imgIns" src={require(`${images[18].imageUrl}`)} /> </div>
-                        <div className="img2"> <img className="imgIns" src={require(`${images[17].imageUrl}`)} /> </div>
+                        <div className="img1"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
+                        <div className="img2"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
                     </div>
                     <div className="imageFeed1">
-                        <div className="img3"> <img className="imgIns" src={require(`${images[16].imageUrl}`)} /> </div>
-                        <div className="img4"> <img className="imgIns" src={require(`${images[18].imageUrl}`)} /> </div>
+                        <div className="img3"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
+                        <div className="img4"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
                     </div>
                     <div className="imageFeed1">
-                        <div className="img5"> <img className="imgIns" src={require(`${images[18].imageUrl}`)} /> </div>
-                        <div className="img6"> <img className="imgIns" src={require(`${images[18].imageUrl}`)} /> </div>
+                        <div className="img5"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
+                        <div className="img6"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
                     </div>
 
                 </div>
