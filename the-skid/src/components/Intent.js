@@ -140,7 +140,8 @@ class Intent extends Component {
         return (
             <div className="intent">
                 <div className="chatFeed">
-
+                    <div className="feed"></div>
+                    <input placeholder="Add Text here"></input>
                 </div>
                 <div className="imageFeed">
                     <div className="featured">Inspirations of the day</div>
