@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import Intent from './Intent'
 
 class Archive extends Component {
-    constructor(){
-        super()
-        this.state=[
+    constructor(props){
+        super(props)
+       this.state = {
+        
+        data: [
             {
                 imageName: 'Jade Palace',
                 imageUrl: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3674cefc-f68e-422a-ac13-004d781a18af/dctizja-48ff1d87-9d0d-4db5-b8e6-0ed302c99610.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMzY3NGNlZmMtZjY4ZS00MjJhLWFjMTMtMDA0ZDc4MWExOGFmXC9kY3RpemphLTQ4ZmYxZDg3LTlkMGQtNGRiNS1iOGU2LTBlZDMwMmM5OTYxMC5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.UCF25Oc-w6ZOP0rLB9wBV4CaltBl8lpkh_C_FXVLlPA',
@@ -120,8 +123,11 @@ class Archive extends Component {
             },
 
         ]
+    }
 
     }
+
+ 
     render() {
         return (
             <div>
