@@ -7,7 +7,7 @@ class Us extends Component {
                 <div className="about">
                     Hello fellow Burnouts! Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words Words.
                 </div>
-                
+                <footer></footer>
             </div>
         )
     }

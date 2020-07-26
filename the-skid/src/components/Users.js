@@ -1,29 +1,35 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
 
 class Users extends Component {
-    constructor() {
-        super()
-        this.state = [
+        state = {
+            users: [
             {
-                name: "",
-                profilePic: '', 
-                quotes: [],
+                name: "Delgado",
+                profilePic: './assets/knights.png', 
+                quotes: ["Half Iago, Half Fu Manchu, all bastard!"],
                 link: '',
                 images: '', 
             },
             {
                 name: "",
                 profilePic: '', 
-                quotes: [],
+                quotes: ["If you Don't laugh, you'll cry."],
                 link: '',
-                images: '', 
+                images: ''
             },
         ]
     }
+
+    
+
     render() {
+        console.log(this.props.data)
+     
         return (
+            
             <div>
-                
+                <div>  </div>
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
+import User from './Users'
 
 class Intent extends Component {
        state = {
@@ -159,7 +160,7 @@ class Intent extends Component {
                     </div>
 
                 </div>
-
+                <User data={this.state} />
             </div>
         )
     }
