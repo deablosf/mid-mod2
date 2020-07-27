@@ -36,3 +36,4 @@ Image grid:
 A chat feed with random comments on work. If you click the comment it takes you to the art in question.
 
 
+have added react-modal
