@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import User from './Users'
+import Modal from 'react-modal';
 
 class Intent extends Component {
        state = {
@@ -121,12 +122,19 @@ class Intent extends Component {
                 },
 
             ],
-            loggedIn: true
+            loggedIn: true,
+            modalIsOpen: false,
+            modalImg: "./assets/M.jpg",
+            modalTitle: "M"
         }
 
+        
 
     render() {
-        const images = this.state.data
+        const images = this.state.data;
+        const modIsOpen = this.state.modalIsOpen;
+        const bigPic = this.state.modalImg;
+        const modTitle = this.state.modalTitle;
 
         let randN = (max) => {
             var min = 0,
@@ -135,12 +143,21 @@ class Intent extends Component {
                 return num;
             // console.log(score);
         };
-        let boxImg1 = images[randN(19)].imageUrl
-        let boxImg2 = images[randN(19)].imageUrl
-        let boxImg3 = images[randN(19)].imageUrl
-        let boxImg4 = images[randN(19)].imageUrl
-        let boxImg5 = images[randN(19)].imageUrl
-        let boxImg6 = images[randN(19)].imageUrl
+
+        // const modalChanger = (x) => {
+        //     return this.setState({
+        //         modalIsOpen: true, 
+        //         modalImg: x.imageUrl, 
+        //         modalTitle: x.imageName,
+        //     })
+        // };
+
+        let boxImg1 = images[randN(19)]
+        let boxImg2 = images[randN(19)]
+        let boxImg3 = images[randN(19)]
+        let boxImg4 = images[randN(19)]
+        let boxImg5 = images[randN(19)]
+        let boxImg6 = images[randN(19)]
 
 
         return (
@@ -152,19 +169,27 @@ class Intent extends Component {
                 <div className="imageFeed">
                     <div className="featured">Inspirations of the day</div>
                     <div className="imageFeed1">
-                        <div className="img1"> <img className="imgIns" src={require(`${boxImg1}`)} /> </div>
-                        <div className="img2"> <img className="imgIns" src={require(`${boxImg2}`)} /> </div>
+                        <div className="img1"> <button onClick={() => this.setState({modalIsOpen: true, modalImg: boxImg1.imageUrl, modalTitle: boxImg1.imageName})}><img className="imgIns" src={require(`${boxImg1.imageUrl}`)} /> </button> </div>
+                        <div className="img2"> <button onClick={() => this.setState({modalIsOpen: true, modalImg: boxImg2.imageUrl, modalTitle: boxImg2.imageName})}><img className="imgIns" src={require(`${boxImg2.imageUrl}`)} /> </button> </div>
                     </div>
                     <div className="imageFeed1">
-                        <div className="img3"> <img className="imgIns" src={require(`${boxImg3}`)} /> </div>
-                        <div className="img4"> <img className="imgIns" src={require(`${boxImg4}`)} /> </div>
+                        <div className="img3"> <button onClick={() => this.setState({modalIsOpen: true, modalImg: boxImg3.imageUrl, modalTitle: boxImg3.imageName})}> <img className="imgIns" src={require(`${boxImg3.imageUrl}`)} /> </button> </div>
+                        <div className="img4"> <button onClick={() => this.setState({modalIsOpen: true, modalImg: boxImg4.imageUrl, modalTitle: boxImg4.imageName})}> <img className="imgIns" src={require(`${boxImg4.imageUrl}`)} /> </button> </div>
                     </div>
                     <div className="imageFeed1">
-                        <div className="img5"> <img className="imgIns" src={require(`${boxImg5}`)} /> </div>
-                        <div className="img6"> <img className="imgIns" src={require(`${boxImg6}`)} /> </div>
+                        <div className="img5"> <button onClick={() => this.setState({modalIsOpen: true, modalImg: boxImg5.imageUrl, modalTitle: boxImg5.imageName})}> <img className="imgIns" src={require(`${boxImg5.imageUrl}`)} /> </button> </div>
+                        <div className="img6"> <button onClick={() => this.setState({modalIsOpen: true, modalImg: boxImg6.imageUrl, modalTitle: boxImg6.imageName})}> <img className="imgIns" src={require(`${boxImg6.imageUrl}`)} /> </button> </div>
                     </div>
 
                 </div>
+                <Modal isOpen={modIsOpen}>
+                    <div>
+                        <h2>{modTitle}</h2>
+                        <button onClick={() => this.setState({modalIsOpen: false})}> X </button>
+                    </div>
+                    
+                    <img className="bigImg" src={require(`${bigPic}`)} />
+                </Modal>
                 <User data={this.state} />
             </div>
         )

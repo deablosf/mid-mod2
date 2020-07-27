@@ -16,6 +16,12 @@
   background-color: linear-gradient(rgb(236, 22, 104), rgb(230, 33, 33), darkgrey);
 }
 
+.skid{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding-bottom: 2vh;
+  font-size: 28px;
+}
+
 .linkin{
   width: 50vw;
   display: flex;
@@ -106,8 +112,8 @@ a:visited {
 }
 
 .imgIns{
-  height: inherit;
-  width: inherit;
+  height: 40vh;
+  width: 20vw;
 }
 
 .imgIns:hover{

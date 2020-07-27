@@ -16,7 +16,8 @@ function App() {
     <Router>
       <div>
       <header className="App-header">
-        <div>Inspiring   the   Burnout   in   All  of   Us</div>
+        <div className="skid">The SKIDS</div>
+        <div>Inspiring   the   Burnouts   in   All  of   Us</div>
         <div className="linkin">
           <div><Link to="/us">US</Link></div>
           <div><Link to="/intent">WELL of INTENT</Link></div>
