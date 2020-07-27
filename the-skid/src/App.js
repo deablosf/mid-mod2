@@ -8,7 +8,8 @@ import {
 } from "react-router-dom";
 import Intent from './components/Intent';
 import Us from './components/Us';
-import Users from './components/Users' 
+import Users from './components/Users';
+import Modal from './components/Modal'
 
 function App() {
   return (
@@ -26,7 +27,6 @@ function App() {
         <div className="title">
 
         </div>
-         
          {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL.  */}
          <Switch>

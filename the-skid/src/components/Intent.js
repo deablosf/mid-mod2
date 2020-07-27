@@ -135,9 +135,14 @@ class Intent extends Component {
                 return num;
             // console.log(score);
         };
+        let boxImg1 = images[randN(19)].imageUrl
+        let boxImg2 = images[randN(19)].imageUrl
+        let boxImg3 = images[randN(19)].imageUrl
+        let boxImg4 = images[randN(19)].imageUrl
+        let boxImg5 = images[randN(19)].imageUrl
+        let boxImg6 = images[randN(19)].imageUrl
 
-        // console.log(this.state.data)
-        // console.log(images[18].imageUrl)
+
         return (
             <div className="intent">
                 <div className="chatFeed">
@@ -147,16 +152,16 @@ class Intent extends Component {
                 <div className="imageFeed">
                     <div className="featured">Inspirations of the day</div>
                     <div className="imageFeed1">
-                        <div className="img1"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
-                        <div className="img2"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
+                        <div className="img1"> <img className="imgIns" src={require(`${boxImg1}`)} /> </div>
+                        <div className="img2"> <img className="imgIns" src={require(`${boxImg2}`)} /> </div>
                     </div>
                     <div className="imageFeed1">
-                        <div className="img3"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
-                        <div className="img4"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
+                        <div className="img3"> <img className="imgIns" src={require(`${boxImg3}`)} /> </div>
+                        <div className="img4"> <img className="imgIns" src={require(`${boxImg4}`)} /> </div>
                     </div>
                     <div className="imageFeed1">
-                        <div className="img5"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
-                        <div className="img6"> <img className="imgIns" src={require(`${images[randN(19)].imageUrl}`)} /> </div>
+                        <div className="img5"> <img className="imgIns" src={require(`${boxImg5}`)} /> </div>
+                        <div className="img6"> <img className="imgIns" src={require(`${boxImg6}`)} /> </div>
                     </div>
 
                 </div>
